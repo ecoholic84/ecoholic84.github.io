@@ -1,0 +1,193 @@
+/* Global Styles */
+body {
+    margin: 5% auto; /* Center the content vertically */
+    background: #000000; /* Background color */
+    color: #c7c6c6; /* Text color */
+    font-family: monospace; /* Font family */
+    font-size: 15px; /* Base font size */
+    line-height: 1.8; /* Line height */
+    max-width: 90%; /* Limit content width */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+/* Additional Styles */
+.theme-toggle-button {
+    cursor: pointer; /* Set cursor to pointer */
+    background: rgba(80, 80, 80, 0.5); /* Background color of the button */
+    color: #9a9a9a; /* Text color of the button */
+    font-size: 14px; /* Font size of the button */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding for better spacing */
+    border-radius: 3px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.light-mode .theme-toggle-button {
+    background: rgba(223, 222, 222, 0.5); /* Background color of the button in light mode */
+    color: #333333; /* Text color of the button in light mode */
+}
+
+/* Additional CSS from the provided code */
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+
+li::before {
+    content: "\2013"; /* Use en dash (–) as bullet points */
+    margin-right: 0.5em; /* Add some space between the en dash and the text */
+}
+
+.no-bullets {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.custom-bullets::before {
+    content: "\2013"; /* Use en dash (–) as bullet points */
+    margin-right: 0.5em; /* Add some space between the en dash and the text */
+}
+
+
+
+/* Light mode styles for local storage*/
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+code {
+    background: #000000; /* Background color for code blocks */
+}
+
+a {
+    border-bottom: 1px solid #e0e0e0; /* Add underline effect on hover */
+    color: #e0e0e0; /* Link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+    border-bottom: 0; /* Remove underline on hover */
+}
+
+/* Light Mode */
+.light-mode {
+    background: #ffffff; /* Light mode background color */
+    color: #000000; /* Light mode text color */
+}
+
+.light-mode a {
+    border-bottom: 1px solid #444444; /* Add underline effect in light mode */
+    color: #444444; /* Link color in light mode */
+}
+
+.light-mode a:hover {
+    border-bottom: 0; /* Remove underline on hover in light mode */
+}
+
+.light-mode code {
+    background: white; /* Code block background color in light mode */
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative; /* Position relative for child elements */
+    max-width: 800px; /* Maximum width of the timeline */
+    margin: 0 auto; /* Center the timeline horizontally */
+    padding-top: 30px; /* Top padding for spacing */
+}
+
+.timeline::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position absolute to place it correctly */
+    width: 4px; /* Width of the vertical line */
+    background-color: #333; /* Color of the vertical line */
+    top: 0; /* Align to the top of the timeline */
+    bottom: 10%; /* Leave some space at the bottom */
+    left: 50%; /* Position it in the middle */
+    margin-left: -2px; /* Adjust the position */
+}
+
+.timeline-item {
+    padding: 8px 30px; /* Padding for timeline items */
+    position: relative; /* Position relative for child elements */
+    width: 50%; /* Width of each timeline item */
+}
+
+.timeline-item::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position absolute to place it correctly */
+    width: 24px; /* Width of the marker */
+    height: 24px; /* Height of the marker */
+    background-color: #ff9f55; /* Color of the marker */
+    border: 4px solid #333; /* Border of the marker */
+    top: 50%; /* Position it vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    border-radius: 50%; /* Make it a circle */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.left {
+    right: 7%; /* Position timeline item to the left */
+}
+
+.right {
+    left: 50%; /* Position timeline item to the right */
+}
+
+.left::before {
+    right: -13px; /* Adjust marker position for left-aligned items */
+}
+
+.right::before {
+    left: -15px; /* Adjust marker position for right-aligned items */
+}
+
+.content {
+    padding: 15px 25px; /* Padding for timeline item content */
+    background-color: #333; /* Background color of content */
+    position: relative; /* Position relative for child elements */
+    border-radius: 4px; /* Rounded corners */
+    color: #fff; /* Text color */
+}
+
+
+/* Notes */
+#notes-container {
+    width: 40%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notes {
+    border-bottom: 1px solid #ddd;
+    padding: 0; /* Change this line */
+    line-height: 1; /* Add this line */
+}
+
+em {
+    color: #9e9b9b;
+}
+
+#projects-container {
+    width: 40%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects {
+    border-bottom: 1px solid #ddd;
+    padding: 0; /* Change this line */
+    line-height: 1; /* Add this line */
+}
+
+em {
+    color: #9e9b9b;
+}
+
+
