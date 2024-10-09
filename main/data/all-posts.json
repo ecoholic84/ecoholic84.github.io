@@ -1,18 +1,18 @@
 [
     {
-        "title": "Love",
-        "author": "ecoholic",
-        "date": "07-10-2024",
-        "summary": "What is love?",
-        "file": "/blogs/love.md"
-    },
-
-    {
         "title": "Forgiveness",
         "author": "ecoholic",
         "date": "09-10-2024",
         "summary": "Forgive or Forget?",
         "file": "/blogs/forgiveness.md"
+    },
+
+    {
+        "title": "Love",
+        "author": "ecoholic",
+        "date": "07-10-2024",
+        "summary": "Is love enough?",
+        "file": "/blogs/love.md"
     }
 
 ]
