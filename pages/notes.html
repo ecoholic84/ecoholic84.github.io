@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
     <link rel="stylesheet" href="/main/styles.css">
+    <!-- Include Showdown.js for Markdown to HTML conversion -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 </head>
 <body class="main-body">
     <h2>Notes</h2>
@@ -12,11 +14,16 @@
     <p><b>thoughts on life, existence and everything.</b></p>
     <hr width="100%" size="3">
 
-    <hr width="100%" size="3">
+    <!-- Blog summaries will be filled dynamically here -->
     <div class="notes-container"> 
-    <!-- JSON Data will be filled here on live page-->
+        <!-- JSON Data will be filled here on live page -->
     </div>
+
+    <!-- Container to display full blog content when clicked -->
+    <div class="blog-content">
+        <!-- Markdown blog content will be injected here -->
+    </div>
+
     <script src="/main/script.js"></script>
 </body>
 </html>
-
