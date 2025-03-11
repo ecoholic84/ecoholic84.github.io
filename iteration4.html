@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecoholic.dev | Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#8BC34A', // light green
+                            DEFAULT: '#4CAF50', // medium green
+                            dark: '#2E7D32', // dark green
+                        },
+                        secondary: {
+                            light: '#B2DFDB',
+                            DEFAULT: '#009688', // teal
+                            dark: '#00796B',
+                        },
+                        neutral: {
+                            100: '#f5f5f5',
+                            200: '#e0e0e0',
+                            300: '#bbbbbb',
+                            400: '#9e9e9e',
+                            500: '#757575',
+                            600: '#5d5d5d',
+                            700: '#424242',
+                            800: '#303030',
+                            900: '#212121',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+        
+        .custom-shape-divider-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .typing-cursor::after {
+            content: '|';
+            animation: cursor 1s infinite;
+        }
+        
+        @keyframes cursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="font-sans text-neutral-800 bg-neutral-100">
+    <nav class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-primary-dark flex items-center">
+                <span class="mr-2"><i class="fas fa-leaf"></i></span>
+                ecoholic<span class="text-secondary-dark">.dev</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-primary-dark transition-colors">About</a>
+                <a href="#projects" class="hover:text-primary-dark transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-primary-dark transition-colors">Skills</a>
+                <a href="#blog" class="hover:text-primary-dark transition-colors">Blog</a>
+                <a href="#contact" class="hover:text-primary-dark transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-neutral-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-br from-primary-light/10 to-secondary-light/10 py-20 md:py-32 px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <p class="text-secondary-dark font-medium mb-4">Hello, I'm</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4">Developer Name</h1>
+                    <div class="mb-6 text-xl md:text-2xl font-mono typing-cursor" id="typing-text">
+                        Full Stack Developer
+                    </div>
+                    <p class="text-neutral-600 mb-8 text-lg max-w-xl">
+                        Building sustainable digital solutions with clean code and eco-friendly development practices. Passionate about creating tech that makes a positive impact.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-primary-DEFAULT hover:bg-primary-dark text-white px-6 py-3 rounded-md transition-colors shadow-md">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="border-2 border-secondary-DEFAULT text-secondary-DEFAULT hover:bg-secondary-DEFAULT hover:text-white px-6 py-3 rounded-md transition-colors">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden">
+                        <img src="/api/placeholder/400/400" alt="Developer portrait" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary-dark/20 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-white"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary-DEFAULT mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6 text-neutral-800">My Journey</h3>
+                    <p class="text-neutral-600 mb-6">
+                        I'm a full-stack developer with a passion for sustainable technology and eco-friendly coding practices. My journey in tech began with a fascination for how digital solutions can help address environmental challenges.
+                    </p>
+                    <p class="text-neutral-600 mb-6">
+                        With experience spanning web development, mobile applications, and cloud solutions, I focus on creating efficient, scalable, and environmentally conscious digital products that make a real difference.
+                    </p>
+                    <p class="text-neutral-600">
+                        When I'm not coding, you might find me contributing to open-source projects, exploring nature trails, or experimenting with renewable energy concepts at home.
+                    </p>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-6">
+                    <div class="bg-neutral-100 p-6 rounded-lg shadow-md">
+                        <div class="text-primary-DEFAULT text-4xl mb-4">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Clean Code</h4>
+                        <p class="text-neutral-600">Writing efficient, maintainable, and sustainable code solutions.</p>
+                    </div>
+                    <div class="bg-neutral-100 p-6 rounded-lg shadow-md">
+                        <div class="text-primary-DEFAULT text-4xl mb-4">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Web Development</h4>
+                        <p class="text-neutral-600">Creating responsive, accessible, and eco-friendly web applications.</p>
+                    </div>
+                    <div class="bg-neutral-100 p-6 rounded-lg shadow-md">
+                        <div class="text-primary-DEFAULT text-4xl mb-4">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Backend Systems</h4>
+                        <p class="text-neutral-600">Developing efficient server-side applications and APIs.</p>
+                    </div>
+                    <div class="bg-neutral-100 p-6 rounded-lg shadow-md">
+                        <div class="text-primary-DEFAULT text-4xl mb-4">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Green Tech</h4>
+                        <p class="text-neutral-600">Implementing eco-friendly practices in software development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-neutral-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+                <div class="w-20 h-1 bg-primary-DEFAULT mx-auto"></div>
+                <p class="text-neutral-600 mt-6 max-w-2xl mx-auto">
+                    Here are some of my recent projects that showcase my skills and passion for eco-friendly development.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg hover:-translate-y-1">
+                    <div class="h-48 bg-neutral-200 relative overflow-hidden">
+                        <img src="/api/placeholder/400/250" alt="Project 1" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-4">
+                                <span class="text-xs font-medium text-white bg-primary-DEFAULT py-1 px-2 rounded">Web App</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Eco Resource Tracker</h3>
+                        <p class="text-neutral-600 mb-4">
+                            A web application that helps users track and optimize their resource usage to reduce environmental impact.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">React</span>
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Node.js</span>
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">MongoDB</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary-DEFAULT hover:text-primary-dark font-medium">View Project</a>
+                            <div class="flex gap-3">
+                                <a href="#" class="text-neutral-500 hover:text-neutral-700">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="text-neutral-500 hover:text-neutral-700">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg hover:-translate-y-1">
+                    <div class="h-48 bg-neutral-200 relative overflow-hidden">
+                        <img src="/api/placeholder/400/250" alt="Project 2" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-4">
+                                <span class="text-xs font-medium text-white bg-secondary-DEFAULT py-1 px-2 rounded">Mobile App</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Green Living Guide</h3>
+                        <p class="text-neutral-600 mb-4">
+                            A mobile application providing tips and tracking tools for sustainable living practices.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">React Native</span>
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Firebase</span>
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Redux</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary-DEFAULT hover:text-primary-dark font-medium">View Project</a>
+                            <div class="flex gap-3">
+                                <a href="#" class="text-neutral-500 hover:text-neutral-700">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="text-neutral-500 hover:text-neutral-700">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg hover:-translate-y-1">
+                    <div class="h-48 bg-neutral-200 relative overflow-hidden">
+                        <img src="/api/placeholder/400/250" alt="Project 3" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-4">
+                                <span class="text-xs font-medium text-white bg-primary-dark py-1 px-2 rounded">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Carbon Footprint API</h3>
+                        <p class="text-neutral-600 mb-4">
+                            An API service that calculates carbon footprints for various activities and provides optimization recommendations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Express.js</span>
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">PostgreSQL</span>
+                            <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Docker</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary-DEFAULT hover:text-primary-dark font-medium">View Project</a>
+                            <div class="flex gap-3">
+                                <a href="#" class="text-neutral-500 hover:text-neutral-700">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="text-neutral-500 hover:text-neutral-700">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center gap-2 border-2 border-primary-DEFAULT text-primary-DEFAULT hover:bg-primary-DEFAULT hover:text-white px-6 py-3 rounded-md transition-colors">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+                <div class="w-20 h-1 bg-primary-DEFAULT mx-auto"></div>
+                <p class="text-neutral-600 mt-6 max-w-2xl mx-auto">
+                    Here are the technologies and tools I'm proficient with.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 flex items-center">
+                        <span class="text-primary-DEFAULT mr-3"><i class="fas fa-code"></i></span>
+                        Frontend Development
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-primary-DEFAULT rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-primary-DEFAULT rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">React</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-primary-DEFAULT rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Tailwind CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-primary-DEFAULT rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">TypeScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-primary-DEFAULT rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 flex items-center">
+                        <span class="text-primary-DEFAULT mr-3"><i class="fas fa-server"></i></span>
+                        Backend Development
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Node.js</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-secondary-DEFAULT rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Express.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-secondary-DEFAULT rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">MongoDB</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-secondary-DEFAULT rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">PostgreSQL</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-secondary-DEFAULT rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">API Design</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full">
+                                <div class="h-full bg-secondary-DEFAULT rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Tools & Technologies</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fab fa-git-alt text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">Git</span>
+                    </div>
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fab fa-docker text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">Docker</span>
+                    </div>
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fab fa-aws text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">AWS</span>
+                    </div>
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fab fa-figma text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">Figma</span>
+                    </div>
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fas fa-terminal text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">CLI</span>
+                    </div>
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fab fa-jenkins text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">CI/CD</span>
+                    </div>
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fas fa-code-branch text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">GitHub</span>
+                    </div>
+                    <div class="bg-neutral-100 p-4 rounded-md flex flex-col items-center w-24">
+                        <i class="fas fa-globe text-3xl text-neutral-700 mb-2"></i>
+                        <span class="text-sm">Jamstack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I'm Working On -->
+    <section class="py-20 px-6 bg-gradient-to-br from-primary-light/10 to-secondary-light/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What I'm Working On</h2>
+                <div class="w-20 h-1 bg-primary-DEFAULT mx-auto"></div>
+                <p class="text-neutral-600 mt-6 max-w-2xl mx-auto">
+                    Current projects and initiatives I'm focused on.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-primary-DEFAULT text-4xl mb-4">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Sustainable Dev Framework</h3>
+                    <p class="text-neutral-600 mb-4">
+                        Developing an open-source framework for measuring and optimizing the environmental impact of web applications.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Open Source</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Research</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">JavaScript</span>
+                    </div>
+                    <a href="#" class="text-primary-DEFAULT hover:text-primary-dark font-medium flex items-center gap-2">
+                        <span>View progress</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-primary-DEFAULT text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">AI Resource Optimizer</h3>
+                    <p class="text-neutral-600 mb-4">
+                        Building a machine learning tool that analyzes code to suggest optimizations for reducing computational resources and energy usage.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Machine Learning</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-2 rounded">Python</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-600 py-1 px-
